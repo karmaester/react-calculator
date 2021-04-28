@@ -1,35 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@karmaester 
-microverseinc
-/
-linters-config
-11
-107357
-Code
-Issues
-1
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-linters-config/react-redux/.github/workflows/linters.yml
-@Spayco
-Spayco Bump up outdated packages (#142)
-Latest commit dfd8253 13 days ago
- History
- 4 contributors
-@MauricioRobayo@Spayco@bolah2009@bertil291utn
-36 lines (33 sloc)  1.22 KB
-  
 name: Linters
 
 on: pull_request
@@ -66,15 +34,3 @@ jobs:
           [ -f .stylelintrc.json ] || wget https://raw.githubusercontent.com/microverseinc/linters-config/master/react-redux/.stylelintrc.json
       - name: Stylelint Report
         run: npx stylelint "**/*.{css,scss}"
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About

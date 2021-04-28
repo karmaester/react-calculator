@@ -10,5 +10,5 @@ export default class Header extends React.Component {
 }
 
 Header.propTypes = {
-  name: PropTypes.string
+  name: PropTypes.string,
 };
