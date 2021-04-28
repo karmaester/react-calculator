@@ -1,6 +1,6 @@
 # React Calculator
 
-- Task tracker made with React. Users can add and remove tasks, update reminders and toggle form.
+- Carculator made with React, ES6, and CSS.
 
 ## Live Demo
 
