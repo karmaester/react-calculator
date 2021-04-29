@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default class Header extends React.Component {
-  render() {
-    return (
-      <h1>{this.props.title}</h1>
-    );
-  }
-}
+const Header = ({ title }) => (
+  <h1>{title}</h1>
+);
+
+Header.defaultProps = {
+  title: 'calculator',
+};
 
 Header.propTypes = {
-  name: PropTypes.string,
+  title: PropTypes.string,
 };
+
+export default Header;
