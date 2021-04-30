@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+}
+
+.App {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
