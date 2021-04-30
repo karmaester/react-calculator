@@ -1,22 +1,16 @@
 import PropTypes from 'prop-types';
 
-const Button = ({ color, text }) => (
+const Button = ({ name }) => (
   <button
     type="submit"
-    style={{ backgroundColor: color }}
     className="btn"
   >
-    {text}
+    {name}
   </button>
 );
 
-Button.defaultProps = {
-  color: 'steelblue',
-};
-
 Button.propTypes = {
-  text: PropTypes.string.isRequired,
-  color: PropTypes.string,
+  name: PropTypes.string.isRequired,
 };
 
 export default Button;
