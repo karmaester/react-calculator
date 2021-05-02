@@ -6,6 +6,39 @@ const calculate = (data, buttonName) => {
   const symbols = ['÷', '*', '-', '+'];
   const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
 
+  if (symbols.includes(buttonName)) {
+    if (!next) {
+      result = {
+        total,
+        next,
+        operation: operation ? (operation = buttonName.toString())
+          : (operation = buttonName.toString()),
+      };
+    } else if (next) {
+      result = {
+        total: operate(total, next, operation),
+        next: null,
+        operation: operation ? (operation = buttonName.toString())
+          : (operation = buttonName.toString()),
+      };
+    }
+  }
+  if (numbers.includes(buttonName)) {
+    if (!operation) {
+      result = {
+        total: total ? (total += buttonName.toString()) : (total = buttonName.toString()),
+        next,
+        operation,
+      };
+    } else if (operation) {
+      result = {
+        total,
+        next: next ? (next += buttonName.toString()) : (next = buttonName.toString()),
+        operation,
+      };
+    }
+  }
+
   if (buttonName === '=') {
     result = {
       total: operate(total, next, operation),
