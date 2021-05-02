@@ -1,5 +1,10 @@
-/* eslint-disable no-unused-vars */
 import Big from 'big.js';
 
-const x = new Big(123.4567);
-/* eslint-enable no-unused-vars */
+const operate = (numberOne, numberTwo, operation) => {
+  const num1 = Big(numberOne);
+  const num2 = Big(numberTwo);
+  let total = 0;
+
+  return total.toString();
+};
+export default operate;
