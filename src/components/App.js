@@ -6,7 +6,7 @@ import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
 
-function App() {
+const App = () => {
   const [calculator, setCalculator] = useState({
     total: null,
     next: null,
@@ -34,7 +34,7 @@ function App() {
       </div>
     </>
   );
-}
+};
 
 export default App;
 /* eslint-enable no-unused-vars */

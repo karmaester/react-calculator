@@ -1,9 +1,13 @@
 import PropTypes from 'prop-types';
+import React from 'react';
 
-const Button = ({ name }) => (
+const Button = ({ name, handleClick }) => (
   <button
-    type="submit"
+    type="button"
     className="btn"
+    onClick={() => {
+      handleClick(name);
+    }}
   >
     {name}
   </button>
@@ -11,6 +15,7 @@ const Button = ({ name }) => (
 
 Button.propTypes = {
   name: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired,
 };
 
 export default Button;
