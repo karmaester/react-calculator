@@ -2,13 +2,19 @@
 import './App.css';
 import Big from 'big.js';
 import Header from './Header';
+import Display from './Display';
+import ButtonPanel from './ButtonPanel';
 
 function App() {
   const x = new Big(123.4567);
   return (
-    <div className="App">
+    <>
       <Header title="Math Magicians" />
-    </div>
+      <div className="calculator">
+        <Display />
+        <ButtonPanel />
+      </div>
+    </>
   );
 }
 

@@ -11,6 +11,28 @@
 - JavaScript
 - React
 
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+### Setup
+
+- Open the console
+- Download or git clone git@github.com:karmaester/react-calculator.git
+- cd react-calculator
+
+Install Node and npm:
+
+```
+  sudo apt install nodejs
+  sudo apt install npm
+```
+
+Run the following command
+
+```
+   npm run start
+```
 
 ## 🤝 :raised_hand: :raised_hand: Contributing
 

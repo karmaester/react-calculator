@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+}
+
+.App {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.display {
+  max-width: 600px;
+}
+
+.btn {
+  width: 25%;
+}
