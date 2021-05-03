@@ -6,35 +6,41 @@ import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
 
-const App = () => {
-  const [calculator, setCalculator] = useState({
-    total: null,
-    next: null,
-    operation: null,
-  });
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      total: '',
+      next: '',
+      operation: '',
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
 
-  const handleClick = (operation) => {
-    setCalculator(calculate(calculator, operation));
-  };
+  handleClick(buttonName) {
+    const calcResult = calculate(this.state, buttonName);
+    this.setState(calcResult);
+  }
 
-  const { total, next, operation } = calculator;
-
-  return (
-    <>
-      <Header title="Math Magicians" />
-      <div className="calculator">
-        <Display
-          result={
-          `${total || ''}
-          ${operation || ''}
-          ${(total && next) || ''}`
-          }
-        />
-        <ButtonPanel clickHandler={handleClick} />
-      </div>
-    </>
-  );
-};
+  render() {
+    const { total, next, operation } = this.state;
+    return (
+      <>
+        <Header title="Math Magicians" />
+        <div className="calculator">
+          <Display
+            result={
+            `${total || ''}
+            ${operation || ''}
+            ${(total && next) || ''}`
+            }
+          />
+          <ButtonPanel clickHandler={this.handleClick} />
+        </div>
+      </>
+    );
+  }
+}
 
 export default App;
 /* eslint-enable no-unused-vars */
