@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
 
-const Display = ({ text }) => (
+const Display = ({ result }) => (
   <div className="display">
-    {text}
+    {result}
   </div>
 );
 
 Display.defaultProps = {
-  text: '0',
+  result: '0',
 };
 
 Display.propTypes = {
-  text: PropTypes.string,
+  result: PropTypes.string,
 };
 
 export default Display;
