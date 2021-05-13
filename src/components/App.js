@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
-import './App.css';
+import './App.scss';
 import React, { useState } from 'react';
-import Header from './Header';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
@@ -22,7 +21,6 @@ const App = () => {
 
   return (
     <>
-      <Header title="Math Magicians" />
       <div className="calculator">
         <Display
           result={
