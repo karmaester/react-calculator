@@ -12,6 +12,12 @@ const SumNumbs = {
   operation: '+',
 };
 
+const SumNumbsWrong = {
+  total: '100',
+  next: null,
+  operation: '+',
+};
+
 const nextNumberNull = {
   total: '50',
   next: null,
@@ -30,10 +36,19 @@ describe('calculate', () => {
     expect(emptyvalue).toEqual(defaultValue);
   });
 
-  it('sholuld return the value when adding two numbers', () => {
+  it('should return the value when adding two numbers', () => {
     const addTwo = calculate(SumNumbs, '=');
     expect(addTwo).toEqual({
       total: '190',
+      next: null,
+      operation: null,
+    });
+  });
+
+  it('should set total to null', () => {
+    const addTwo = calculate(SumNumbsWrong, '=');
+    expect(addTwo).toEqual({
+      total: null,
       next: null,
       operation: null,
     });
