@@ -2,6 +2,8 @@
 
 - Carculator made with React, ES6, and CSS.
 
+![screenshot](public/screenshot.png)
+
 ## Live Demo
 
 [Live version](https://math-magicians-karmaester.herokuapp.com/)
