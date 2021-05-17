@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  background-color: rgb(255, 248, 225);
+}
+
+#root {
+	min-height: 100vh;
+}
+
+.App {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.calculator {
+  margin-top: 5rem;
+  margin-left: calc(50vw - 300px);
+}
+
+.welcome, .quote {
+  width: 100%;
+  text-align: center;
+  margin-top: 30vh;
+}
+
+.welcome {
+  font-size: 5rem;
+}
+
+.quote {
+  font-size: 2.5rem;
+  span {
+    color: gray;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+  }
+}
+
+.logo {
+  font-size: 2.5rem;
+}
+
+.display {
+  max-width: 600px;
+  background-color: gray;
+}
+
+.navbar {
+  padding: 1rem;
+  background: #fcfcfc;
+  display: flex;
+  justify-content: space-between; 
+
+  span {
+    color: orange;
+  }
+
+  .nav-links {
+    display: flex;
+    font-size: 1.5rem;
+
+    .nav-link {
+      text-decoration: none;
+      padding-left: 1rem;
+      padding-top: .5rem;
+      color: orange;
+    }
+  }
+}
+
+.shadow {
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+}
+
+.result {
+  min-height: 3rem;
+  color: white;
+  font-size: 2.5rem;
+  text-align: end;
+}
+
+.btn {
+  width: 25%;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.btn-large {
+  width: 50%;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.bg-orange {
+  background-color: orange;
+}
+
+.bg-gray {
+  background-color:rgb(204, 202, 202);
+}

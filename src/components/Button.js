@@ -1,10 +1,19 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+const getClassName = (name) => {
+  if (name === '0') {
+    return 'btn-large bg-gray';
+  } if (name === '÷' || name === '*' || name === '-' || name === '+' || name === '=') {
+    return 'btn bg-orange';
+  }
+  return 'btn bg-gray';
+};
+
 const Button = ({ name, handleClick }) => (
   <button
     type="button"
-    className="btn"
+    className={getClassName(name)}
     onClick={() => {
       handleClick(name);
     }}
