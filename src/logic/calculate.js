@@ -40,11 +40,19 @@ const calculate = (data, buttonName) => {
   }
 
   if (buttonName === '=') {
-    result = {
-      total: operate(total, next, operation),
-      next: null,
-      operation: null,
-    };
+    if (next === null) {
+      result = {
+        total: null,
+        next: null,
+        operation: null,
+      };
+    } else {
+      result = {
+        total: operate(total, next, operation),
+        next: null,
+        operation: null,
+      };
+    }
   }
 
   if (buttonName === '+/-') {
